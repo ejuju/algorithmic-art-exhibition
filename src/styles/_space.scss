@@ -1,0 +1,10 @@
+html {
+  --p-sides: 1rem;
+  --w-max: 74ch;
+
+  --p-page: 2rem var(--p-sides) 8rem;
+
+  @media (min-width: 800px) {
+    --p-sides: calc((100vw - var(--w-max)) / 2 + 1rem);
+  }
+}

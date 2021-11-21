@@ -1,0 +1,41 @@
+:root {
+  --clr-white: hsl(120, 0%, 100%);
+  --clr-white-1: hsl(120, 0%, 97%);
+  --clr-white-2: hsl(120, 0%, 80%);
+
+  --clr-black: hsl(0, 0%, 5%);
+  --clr-black-1: hsl(0, 0%, 10%);
+  --clr-black-2: hsl(0, 0%, 30%);
+
+  // Colors
+  --clr-1: hsl(125, 100%, 75%);
+  --clr-1-c: #000;
+
+  --clr-red: hsl(0, 100%, 75%);
+  --clr-red-c: #000;
+
+  --clr-yellow: hsl(50, 100%, 75%);
+  --clr-yellow-c: #000;
+}
+
+// Day theme
+body.day {
+  --clr-bg: var(--clr-white);
+  --clr-bg-1: var(--clr-white-1);
+  --clr-bg-2: var(--clr-white-2);
+
+  --clr-txt: var(--clr-black);
+  --clr-txt-1: var(--clr-black-1);
+  --clr-txt-2: var(--clr-black-2);
+}
+
+// Night theme
+body.night {
+  --clr-txt: var(--clr-white);
+  --clr-txt-1: var(--clr-white-1);
+  --clr-txt-2: var(--clr-white-2);
+
+  --clr-bg: var(--clr-black);
+  --clr-bg-1: var(--clr-black-1);
+  --clr-bg-2: var(--clr-black-2);
+}

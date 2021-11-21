@@ -1,0 +1,27 @@
+:root {
+  --br: 1.5rem;
+  --br: 8px;
+  --br: 0;
+
+  --bw: 1px;
+
+  //   --br-blob: 40% 60% 70% 30% / 40% 40% 60% 50%;
+}
+
+.blob {
+  //   transition: border-radius 0.2s linear;
+  animation: blob 4s linear infinite;
+
+  @keyframes blob {
+    0%,
+    100% {
+      border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+    33% {
+      border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+    66% {
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+  }
+}

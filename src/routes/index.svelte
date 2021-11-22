@@ -11,21 +11,23 @@
 
         .Intro {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
             row-gap: 1rem;
             column-gap: 2rem;
 
-            p > a {
-                color: var(--clr-1);
+            h1 {
+                // text-align: center;
             }
         }
 
         .Artworks {
             // margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+
             :global(.Sketch) {
-                margin-top: 4rem;
+                margin-top: 3rem;
             }
         }
     }
@@ -38,10 +40,6 @@
 <main>
     <div class="Intro">
         <h1>Algorithmic art exhibition</h1>
-        <p>
-            Creative coding by
-            <a href="https://croissant.studio">CROISSANT</a>
-        </p>
     </div>
 
     <section class="Artworks">

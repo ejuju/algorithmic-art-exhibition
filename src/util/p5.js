@@ -1,9 +1,21 @@
 export function getSketchWidth() {
-  return window.innerWidth - 36;
+  //   return window.innerWidth - 36;
+  return getMinSize();
 }
 
 export function getSketchHeight() {
-  return window.innerHeight - 200;
+  //   return window.innerHeight - 200;
+  return getMinSize();
+}
+
+function getMinSize() {
+  const additionalSpace = 36;
+
+  if (window.innerWidth < window.innerHeight) {
+    return window.innerWidth - additionalSpace;
+  } else {
+    return window.innerHeight - 160;
+  }
 }
 
 // Including min and max

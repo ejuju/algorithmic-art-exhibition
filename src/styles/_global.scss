@@ -61,7 +61,8 @@ button {
   max-width: max-content;
   text-align: left;
   cursor: pointer;
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw);
+  text-decoration: underline;
 }
 
 .btn {

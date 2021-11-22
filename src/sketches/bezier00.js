@@ -21,8 +21,9 @@ export default (p5) => {
     inc = 0;
     clicked = false;
     p5.createCanvas(getSketchWidth(), getSketchHeight());
+    p5.background('#fff');
     p5.noFill();
-    p5.stroke('#fff');
+    p5.stroke('#000');
     p5.strokeWeight(0.1);
     // p5.noLoop();
   };
@@ -44,8 +45,6 @@ export default (p5) => {
 
     x4 = getRandNoise(p5, inc + 6, 0, getSketchWidth());
     y4 = getRandNoise(p5, inc + 9, 0, getSketchHeight());
-
-    p5.stroke('#fff');
 
     p5.bezier(x1, y1, x2, y2, x3, y3, x4, y4);
 

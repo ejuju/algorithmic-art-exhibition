@@ -6,6 +6,7 @@ export default (p5) => {
 
   p5.setup = function () {
     p5.createCanvas(getSketchWidth(), getSketchHeight());
+    p5.background('#000');
     p5.noFill();
     p5.strokeWeight(0.2);
     x1 = p5.width;

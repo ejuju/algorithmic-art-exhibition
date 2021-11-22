@@ -116,11 +116,30 @@
 
 <style lang="scss">
     .Sketch {
-        display: flex;
-        flex-direction: column;
         user-select: none;
+        display: flex;
+        // flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        column-gap: 2rem;
+        max-width: max-content;
+        margin: 0 auto;
+
+        .WrapsCanvas {
+            border: solid 1px var(--clr-txt);
+
+            overflow: scroll;
+            display: flex;
+            flex-direction: column;
+        }
 
         h2 {
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+            border: solid 1px var(--clr-txt);
+            border-top: none;
+            border-bottom: none;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -133,20 +152,16 @@
             }
         }
 
-        .WrapsCanvas {
-            margin-top: 0.5rem;
-            border: solid 1px var(--clr-txt);
-
-            overflow: scroll;
-            display: flex;
-            flex-direction: column;
-        }
-
         .Controls {
-            margin-top: 0.5rem;
+            width: 100%;
+            padding: 0 1rem 1rem;
+            border: solid 1px var(--clr-txt);
+            border-top: none;
 
             display: flex;
             flex-wrap: wrap;
+            // justify-content: space-between;
+
             row-gap: 0.5rem;
             column-gap: 2rem;
 
@@ -154,6 +169,7 @@
                 text-decoration: underline;
                 display: flex;
                 align-items: center;
+                color: var(--clr-txt-1);
                 :global(svg) {
                     margin-top: 0.1rem;
                     margin-right: 0.5rem;
@@ -164,14 +180,17 @@
 </style>
 
 <section class="Sketch">
+    <div class="WrapsCanvas" use:ref bind:this={canvasWrapper} />
+
     <h2>
         {title}
         {#if interactive}<span>[interactive]</span>{/if}
     </h2>
 
-    <div class="WrapsCanvas" use:ref bind:this={canvasWrapper} />
-
     <section class="Controls">
+        <button on:click={savePicture}><Picture />Take a picture</button>
+        <button on:click={resetSketch}><Restart />Reset</button>
+
         <button on:click={toggleLoop}>
             {#if looping === true}
                 <Pause />Pause
@@ -179,8 +198,5 @@
                 <Play />Play
             {/if}
         </button>
-
-        <button on:click={savePicture}><Picture />Take a picture</button>
-        <button on:click={resetSketch}><Restart />Reset</button>
     </section>
 </section>

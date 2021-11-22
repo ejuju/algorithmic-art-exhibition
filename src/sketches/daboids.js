@@ -2,29 +2,34 @@ import { getSketchWidth, getSketchHeight, getRandNoise } from '../util/p5';
 
 export default (p5) => {
   let boids;
-  let NUMBER_OF_BOIDS = 50;
+  let NUMBER_OF_BOIDS = 40;
 
   p5.setup = function () {
     p5.noiseSeed(p5.random(1000));
-    p5.noStroke();
-
     boids = [];
 
     p5.createCanvas(getSketchWidth(), getSketchHeight());
+    p5.noStroke();
+    p5.background('#fff');
 
     for (let i = 0; i < NUMBER_OF_BOIDS; i++) {
       boids.push(new Boid());
     }
 
-    console.log(boids);
+    // console.log(boids);
   };
 
   p5.draw = function () {
     updateBoids(boids);
-    // p5.background('#00000050');
+    // p5.background('#ffffff01');
   };
 
   p5.mousePressed = function () {
+    boids.push(new Boid(p5.mouseX, p5.mouseY));
+    boids.push(new Boid(p5.mouseX, p5.mouseY));
+    boids.push(new Boid(p5.mouseX, p5.mouseY));
+    boids.push(new Boid(p5.mouseX, p5.mouseY));
+    boids.push(new Boid(p5.mouseX, p5.mouseY));
     boids.push(new Boid(p5.mouseX, p5.mouseY));
   };
 
@@ -38,7 +43,7 @@ export default (p5) => {
       this.incX = p5.random(NUMBER_OF_BOIDS);
       this.incY = p5.random(NUMBER_OF_BOIDS);
 
-      const rand = p5.random(100, 255);
+      const rand = p5.random(0, 10);
       this.r = rand;
       this.g = rand;
       this.b = rand;

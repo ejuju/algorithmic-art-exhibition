@@ -34,6 +34,10 @@
     }
 </style>
 
+<svelte:head>
+    <title>Algorithmic art exhibition by CROISSANT</title>
+</svelte:head>
+
 <main>
     <div class="Intro">
         <h1>Algorithmic art exhibition</h1>

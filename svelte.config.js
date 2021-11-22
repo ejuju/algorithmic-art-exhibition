@@ -1,13 +1,13 @@
 /** @type {import('@sveltejs/kit').Config} */
 import sveltePreprocess from 'svelte-preprocess';
-// import vercel from '@sveltejs/adapter-vercel';
+import vercel from '@sveltejs/adapter-vercel';
 // import { resolve } from "path"
 
 const config = {
   preprocess: sveltePreprocess(),
   kit: {
     target: '#svelte',
-    // adapter: vercel(),
+    adapter: vercel(),
   },
   //   vite: {
   //     resolve: {

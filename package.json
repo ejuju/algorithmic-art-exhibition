@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@sveltejs/kit": "next",
+    "p5": "^1.4.0",
     "sass": "^1.43.4",
     "svelte": "^3.42.6",
     "svelte-preprocess": "^4.9.8"

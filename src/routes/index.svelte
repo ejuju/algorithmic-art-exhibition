@@ -39,7 +39,7 @@
     <div class="Intro">
         <h1>Algorithmic art exhibition</h1>
         <p>
-            A creative coding project by
+            Creative coding by
             <a href="https://croissant.studio">CROISSANT</a>
         </p>
     </div>

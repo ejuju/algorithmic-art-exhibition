@@ -7,7 +7,7 @@
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
-    "@sveltejs/adapter-vercel": "^1.0.0-next.0",
+    "@sveltejs/adapter-vercel": "^1.0.0-next.31",
     "@sveltejs/kit": "next",
     "p5": "^1.4.0",
     "sass": "^1.43.4",

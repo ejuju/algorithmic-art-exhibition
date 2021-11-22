@@ -17,6 +17,11 @@
         flex-direction: column;
         align-items: center;
         row-gap: 0.5rem;
+
+        p {
+            padding-top: 1rem;
+            border-top: solid 1px var(--clr-txt-2);
+        }
     }
 </style>
 

@@ -149,6 +149,7 @@
             column-gap: 2rem;
 
             button {
+                user-select: none;
                 text-decoration: underline;
                 display: flex;
                 align-items: center;

@@ -7,12 +7,9 @@
     main {
         display: flex;
         flex-direction: column;
-        padding: 0 1rem 4rem;
+        padding: 1rem 1rem 4rem;
 
         .Intro {
-            border: solid 1px var(--clr-txt);
-            border-top: none;
-            padding: 1rem;
             display: flex;
             flex-wrap: wrap;
             align-items: center;

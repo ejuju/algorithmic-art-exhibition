@@ -118,6 +118,7 @@
     .Sketch {
         display: flex;
         flex-direction: column;
+        user-select: none;
 
         h2 {
             display: flex;
@@ -149,7 +150,6 @@
             column-gap: 2rem;
 
             button {
-                user-select: none;
                 text-decoration: underline;
                 display: flex;
                 align-items: center;

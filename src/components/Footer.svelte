@@ -27,9 +27,9 @@
 
 <footer>
     <p>Creative coding by <a href="https://croissant.studio">CROISSANT</a></p>
-    <button on:click={toggleTheme}>toggle theme</button>
+    <button on:click={toggleTheme}>Toggle dark theme</button>
     <a
         href="https://www.instagram.com/algo.croissant/"
         target="_blank"
-        rel="noopener noreferrer">more on instagram</a>
+        rel="noopener noreferrer">More pics on instagram</a>
 </footer>
